@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- 按钮文本 -->
+    <sys:String x:Key="LOCTestPluginOpenUserLinkIconDir">Open user link icon directory</sys:String>
+    <sys:String x:Key="LOCTestPluginOpenBannersOverrideDir">Open banners override directory</sys:String>
+
+    <!-- 复选框文本 -->
+    <sys:String x:Key="LOCTestPluginEnableGameMenuRating">Enable game menu entry to rate games</sys:String>
+    <sys:String x:Key="LOCTestPluginEnableSelectionPreservation">Preserve game selection when switching views (Playnite 10)</sys:String>
+    <sys:String x:Key="LOCTestPluginApplyThemeIconOnChange">Apply theme icon to Playnite shortcuts on theme change</sys:String>
+
+    <!-- 复选框工具提示 -->
+    <sys:String x:Key="LOCTestPluginApplyThemeIconTooltip" xml:space="preserve">Sets the icon of the Playnite shortcuts in the start menu, autostart folder and desktop to the applogo.ico supplied by themes, whenever the theme is changed. Use main menu functions to trigger manually or restore default. If Playnite is pinned to the taskbar, it needs to be unpinned and then pinned again to update.</sys:String>
+
+    <!-- 分组框标题 -->
+    <sys:String x:Key="LOCTestPluginBackups">Backups</sys:String>
+
+    <!-- 复选框（备份与恢复） -->
+    <sys:String x:Key="LOCTestPluginBackupAndRestore">Backup and Restore</sys:String>
+
+    <!-- 超链接文本 -->
+    <sys:String x:Key="LOCTestPluginClear">Clear</sys:String>
+    <sys:String x:Key="LOCTestPluginBackup">Backup</sys:String>
+    <sys:String x:Key="LOCTestPluginTheme">Theme</sys:String>
+
+    <!-- 计数显示占位符 -->
+    <sys:String x:Key="LOCTestPluginParenthesisOpen">(</sys:String>
+    <sys:String x:Key="LOCTestPluginSpaceSlashSpace">/</sys:String>
+    <sys:String x:Key="LOCTestPluginParenthesisClose">)</sys:String>
+</ResourceDictionary>

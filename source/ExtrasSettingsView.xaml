@@ -10,29 +10,37 @@
     <UserControl.Resources>
     </UserControl.Resources>
     <DockPanel Margin="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch">
-        <Button DockPanel.Dock="Top" Margin="5" Content="Open user link icon directory" Command="{Binding OpenUserLinkIconDir}" HorizontalAlignment="Left"/>
-        <Button DockPanel.Dock="Top" Margin="5" Content="Open banners override directory" Command="{Binding OpenBannersDirectory}" HorizontalAlignment="Left"/>
+        <Button DockPanel.Dock="Top" Margin="5" 
+                Content="{DynamicResource LOCTestPluginOpenUserLinkIconDir}" 
+                Command="{Binding OpenUserLinkIconDir}" 
+                HorizontalAlignment="Left"/>
+        <Button DockPanel.Dock="Top" Margin="5" 
+                Content="{DynamicResource LOCTestPluginOpenBannersOverrideDir}" 
+                Command="{Binding OpenBannersDirectory}" 
+                HorizontalAlignment="Left"/>
         <CheckBox IsChecked="{Binding Settings.EnableGameMenuRating}" Margin="5" HorizontalAlignment="Stretch"
                   DockPanel.Dock="Top">
-            <TextBlock Text="Enable game menu entry to rate games" TextWrapping="Wrap"
-                       />
+            <TextBlock Text="{DynamicResource LOCTestPluginEnableGameMenuRating}" TextWrapping="Wrap"/>
         </CheckBox>
         <CheckBox IsChecked="{Binding Settings.EnableSelectionPreservation}" Margin="5"
                   DockPanel.Dock="Top">
-            <TextBlock Text="Preserve game selection when switching views (Playnite 10)"/>
+            <TextBlock Text="{DynamicResource LOCTestPluginEnableSelectionPreservation}"/>
         </CheckBox>
         <CheckBox IsChecked="{Binding Settings.ApplyThemeIconOnChange}" Margin="5"
                   DockPanel.Dock="Top">
             <CheckBox.ToolTip>
-                <TextBlock Text="Sets the icon of the Playnite shortcuts in the start menu, autostart folder and desktop to the applogo.ico supplied by themes, whenever the theme is changed. Use main menu functions to trigger manually or restore default. If Playnite is pinned to the taskbar, it needs to be unpinned and then pinned again to update."
+                <TextBlock Text="{DynamicResource LOCTestPluginApplyThemeIconTooltip}"
                            TextWrapping="Wrap" MaxWidth="600"/>
             </CheckBox.ToolTip>
-            <TextBlock Text="Apply theme icon to Playnite shortcuts on theme change"/>
+            <TextBlock Text="{DynamicResource LOCTestPluginApplyThemeIconOnChange}"/>
         </CheckBox>
-        <GroupBox Header="Backups" HorizontalAlignment="Left" MinWidth="400"
+        <GroupBox Header="{DynamicResource LOCTestPluginBackups}" 
+                  HorizontalAlignment="Left" MinWidth="400"
                   DockPanel.Dock="Top">
             <StackPanel>
-                <CheckBox Content="Backup and Restore" IsChecked="{Binding Settings.BackupAndRestore}" Margin="5"/>
+                <CheckBox Content="{DynamicResource LOCTestPluginBackupAndRestore}" 
+                          IsChecked="{Binding Settings.BackupAndRestore}" 
+                          Margin="5"/>
                 <ItemsControl DataContext="{Binding ExtendedThemesViewModel}" ItemsSource="{Binding Themes}" Margin="5">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="{x:Type extras:ExtendedTheme}">
@@ -40,7 +48,7 @@
                                 <TextBlock DockPanel.Dock="Right" Margin="5,0">
                                     <Hyperlink Command="{Binding DataContext.ClearCommand, RelativeSource={RelativeSource FindAncestor,AncestorType=ItemsControl}}"
                                         CommandParameter="{Binding}">
-                                        <Run Text="Clear"/>
+                                        <Run Text="{DynamicResource LOCTestPluginClear}"/>
                                     </Hyperlink>
                                 </TextBlock>
                                 <TextBlock DockPanel.Dock="Right" Margin="5,0">
@@ -49,7 +57,7 @@
                                     </TextBlock.ToolTip>
                                     <Hyperlink Command="{Binding DataContext.OpenDirectoryCommand, RelativeSource={RelativeSource FindAncestor,AncestorType=ItemsControl}}"
                                         CommandParameter="{Binding}">
-                                        <Run Text="Backup"/>
+                                        <Run Text="{DynamicResource LOCTestPluginBackup}"/>
                                     </Hyperlink>
                                 </TextBlock>
                                 <TextBlock DockPanel.Dock="Right" Margin="5,0">
@@ -58,17 +66,17 @@
                                     </TextBlock.ToolTip>
                                     <Hyperlink Command="{Binding DataContext.OpenThemeDirectoryCommand, RelativeSource={RelativeSource FindAncestor,AncestorType=ItemsControl}}"
                                         CommandParameter="{Binding}">
-                                        <Run Text="Theme"/>
+                                        <Run Text="{DynamicResource LOCTestPluginTheme}"/>
                                     </Hyperlink>
                                 </TextBlock>
                                 <ContentControl DockPanel.Dock="Left">
                                     <TextBlock Style="{StaticResource BaseTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Left">
                                         <Run Text="{Binding Name, Mode=OneWay}"/>
-                                        <Run Text=" ("/>
+                                        <Run Text="{DynamicResource LOCTestPluginParenthesisOpen}"/>
                                         <Run Text="{Binding BackedUpFilesCount, Mode=OneWay, IsAsync=True}"/>
-                                        <Run Text=" / "/>
+                                        <Run Text="{DynamicResource LOCTestPluginSpaceSlashSpace}"/>
                                         <Run Text="{Binding PersistentFilesCount, Mode=OneWay, IsAsync=True}"/>
-                                        <Run Text=")"/>
+                                        <Run Text="{DynamicResource LOCTestPluginParenthesisClose}"/>
                                     </TextBlock>
                                 </ContentControl>
                             </DockPanel>

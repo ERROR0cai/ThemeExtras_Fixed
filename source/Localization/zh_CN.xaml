@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="LOCTestPluginOpenUserLinkIconDir">打开用户链接图标目录</sys:String>
+    <sys:String x:Key="LOCTestPluginOpenBannersOverrideDir">打开横幅覆盖目录</sys:String>
+    <sys:String x:Key="LOCTestPluginEnableGameMenuRating">启用游戏菜单中为游戏评分的功能</sys:String>
+    <sys:String x:Key="LOCTestPluginEnableSelectionPreservation">切换视图时保留游戏选择（Playnite 10）</sys:String>
+    <sys:String x:Key="LOCTestPluginApplyThemeIconOnChange">更改主题时将主题图标应用到 Playnite 快捷方式</sys:String>
+    <sys:String x:Key="LOCTestPluginApplyThemeIconTooltip" xml:space="preserve">每当更改主题时，将开始菜单、自动启动文件夹和桌面中 Playnite 快捷方式的图标设置为主题提供的 applogo.ico。可使用主菜单功能手动触发或恢复默认图标。如果 Playnite 已固定到任务栏，需要先取消固定再重新固定才能更新。</sys:String>
+    <sys:String x:Key="LOCTestPluginBackups">备份</sys:String>
+    <sys:String x:Key="LOCTestPluginBackupAndRestore">备份与恢复</sys:String>
+    <sys:String x:Key="LOCTestPluginClear">清除</sys:String>
+    <sys:String x:Key="LOCTestPluginBackup">备份</sys:String>
+    <sys:String x:Key="LOCTestPluginTheme">主题</sys:String>
+    <sys:String x:Key="LOCTestPluginParenthesisOpen"> (</sys:String>
+    <sys:String x:Key="LOCTestPluginSpaceSlashSpace"> / </sys:String>
+    <sys:String x:Key="LOCTestPluginParenthesisClose">)</sys:String>
+</ResourceDictionary>

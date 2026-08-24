@@ -1,7 +1,7 @@
-﻿Id: felixkmh_Extras_Plugin
-Name: ThemeExtras
-Author: felixkmh
-Version: 1.4.4
+﻿Id: felixkmh_Extras_Plugin_Fixed-by-ERROR0cai
+Name: ThemeExtras_Fixed by ERROR0cai
+Author: ERROR0cai (Based on felixkmh's ThemeExtras)
+Version: 1.4.4.233
 Module: Extras.dll
 Type: GenericPlugin
 Icon: icon.png

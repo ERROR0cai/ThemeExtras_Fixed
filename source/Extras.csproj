@@ -238,4 +238,19 @@
   <PropertyGroup>
     <PostBuildEvent>%25LOCALAPPDATA%25\Playnite\Toolbox.exe pack $(ProjectDir)$(OutDir) $(ProjectDir)bin</PostBuildEvent>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 将 Localization 文件夹标记为内容，复制到输出目录 -->
+    <Content Include="Localization\**\*.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- 如果你使用打包目标 -->
+  <Target Name="PreparePublishFiles" AfterTargets="Build">
+    <ItemGroup>
+      <!-- 确保 Localization 文件夹被打包 -->
+      <_PublishFiles Include="$(OutputPath)Localization\**\*.*" />
+    </ItemGroup>
+  </Target>
 </Project>
